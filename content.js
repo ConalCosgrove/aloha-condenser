@@ -1,4 +1,5 @@
 let hidden = [];
+let showAll = false;
 let showing = false;
 let headVisible = true;
 let x = $('li[id^=0H4]');
@@ -18,11 +19,13 @@ function toggleCarousel(){
   if(headVisible){
     head.html('');
     headVisible = false;
+    $('#sortable').css("padding-top","35px");
   }else{
     head.html(savedHead);
     headVisible = true;
   }
 }
+
 function showRemoveButtons(){
   if(showing){
     let xbuttons = $('button[id="hide_button"');
