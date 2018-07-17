@@ -1,6 +1,7 @@
 # Aloha Condenser
 Chrome Extension which allows the user to hide unnecessary tiles in their Salesforce Aloha page.
 
+![alt text](https://github.com/ConalCosgrove/aloha-condenser/blob/master/screenshots/1.png "Aloha Condenser in action")
 
 ## To Install:
 * Clone or download this repository to a local folder.
