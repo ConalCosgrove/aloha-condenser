@@ -1,0 +1,19 @@
+  {
+    "name": "Aloha Condensor",
+    "version": "1.0",
+    "description": "Gives you the ability to hide unnecessary Aloha tiles",
+    "permissions": ["storage","activeTab"],
+    "background": {
+      "scripts": ["third-party/jquery-3.3.1.min.js","background.js"],
+      "persistent": false
+    },
+    "content_scripts": [
+      {
+        "matches": [
+          "https://aloha--c.na52.visual.force.com/apex/aloha_appLauncher"
+        ],
+        "js": ["third-party/jquery-3.3.1.min.js","content.js"]
+      }
+    ],
+    "manifest_version": 2
+  }
