@@ -1,14 +1,28 @@
 let hidden = [];
 let showing = false;
+let headVisible = true;
 let x = $('li[id^=0H4]');
+let head = $('.aloha-carousel.slick-initialized.slick-slider');
+let savedHead = head[0];
 chrome.storage.sync.get('hiddenTiles', (data)=> {
   hidden = data.hiddenTiles;
   reload();
 });
 
+$('header').prepend('<button id="carouselToggle" style="margin:15px;float:left;">Hide Carousel</button>');
 $('header').prepend('<button id="showRemove" style="margin:15px;float:left;">Edit Tiles</button>');
+$('button[id=carouselToggle]').click(toggleCarousel);
 $('button[id=showRemove]').click(showRemoveButtons);
 
+function toggleCarousel(){
+  if(headVisible){
+    head.html('');
+    headVisible = false;
+  }else{
+    head.html(savedHead);
+    headVisible = true;
+  }
+}
 function showRemoveButtons(){
   if(showing){
     let xbuttons = $('button[id="hide_button"');

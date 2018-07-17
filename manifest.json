@@ -1,5 +1,5 @@
   {
-    "name": "Aloha Condensor",
+    "name": "Aloha Condenser",
     "version": "1.0",
     "description": "Gives you the ability to hide unnecessary Aloha tiles",
     "permissions": ["storage","activeTab"],
